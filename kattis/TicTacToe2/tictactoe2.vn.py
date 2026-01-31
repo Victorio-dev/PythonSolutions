@@ -53,6 +53,7 @@ for case in range(int(input())):
     else:
         print("no")
 
+    # yes = (A & ~B & C1) | (~A & B & C0) | (~A & ~B & (C0 | C1))
     # A  = wins[X]
     # B  = wins[O]
     # C0 = grid.count(X) - grid.count(O) == 0
