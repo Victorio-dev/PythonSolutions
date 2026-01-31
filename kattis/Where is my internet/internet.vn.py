@@ -1,7 +1,7 @@
 # Where is my internet
 # https://open.kattis.com/problems/wheresmyinternet
 # Union-find
-# 21/01/2025
+# 21/01/2026
 
 n, m = map(int, input().split())
 

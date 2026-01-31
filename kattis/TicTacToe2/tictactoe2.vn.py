@@ -1,3 +1,7 @@
+# TicTacToe2
+# https://open.kattis.com/problems/tictactoe2
+# Game solving
+# 31/01/2026
 
 grid = ["" for _ in range(9)]
 
@@ -34,7 +38,7 @@ for case in range(int(input())):
     }
     
     for i, j, k in lines:
-        if grid[i]==grid[j]==grid[k] and grid[i] in "X0":
+        if grid[i]==grid[j]==grid[k] and grid[i] in "XO":
             wins[grid[i]] = True
     
     # X wins

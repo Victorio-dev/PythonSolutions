@@ -1,7 +1,7 @@
 # Forest for the trees
 # https://open.kattis.com/problems/forestforthetrees
 # Number-theory
-# 21/01/2025
+# 21/01/2026
 
 
 from math import gcd
