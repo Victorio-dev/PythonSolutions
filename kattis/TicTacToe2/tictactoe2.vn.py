@@ -1,6 +1,23 @@
 
 grid = ["" for _ in range(9)]
 
+
+lines = [
+    # Horizontal
+    (0, 1, 2),
+    (3, 4, 5),
+    (6, 7, 8),
+    
+    # Vertical
+    (0, 3, 6),
+    (1, 4, 7),
+    (2, 5, 8),
+
+    # Diags    
+    (0, 4, 8),
+    (2, 4, 6)
+]
+
 for case in range(int(input())):
     i = 0
     for _ in range(3):
@@ -9,7 +26,7 @@ for case in range(int(input())):
             i += 1
             
     try: input()
-    except: pass # No empty lne after test case
+    except: pass # No empty line after test case
     
     wins = {
         "O": False,
@@ -17,22 +34,9 @@ for case in range(int(input())):
         ".": None
     }
     
-    # Horiz
-    for i in range(0, 7, 3):
-        if grid[i]==grid[i+1]==grid[i+2]:
+    for i, j, k in lines:
+        if grid[i]==grid[j]==grid[k]:
             wins[grid[i]] = True
-            
-    # Vertical
-    for i in range(3):
-        if grid[i]==grid[i+3]==grid[i+6]:
-            wins[grid[i]] = True
-            
-    # Diag
-    if grid[0]==grid[4]==grid[8]:
-        wins[grid[0]] = True
-    
-    if grid[2]==grid[4]==grid[6]:
-        wins[grid[2]] = True
     
     # X wins
     if wins["X"] and not wins["O"] and grid.count("X")==grid.count("O")+1:
@@ -46,5 +50,6 @@ for case in range(int(input())):
     elif wins["X"]==wins["O"]==False and 0<=grid.count("X")-grid.count("O")<=1:
         print("yes")
     
+    # Anything else is impossible
     else:
         print("no")
