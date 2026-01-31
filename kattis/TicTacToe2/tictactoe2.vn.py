@@ -55,6 +55,6 @@ for case in range(int(input())):
         
     # wins[X] -> A, wins[O] -> B, grid.count(X)-grid.count(O)==i -> Ci
     
-    # yes = (A.¬B.C1)+(¬A.B.C0)+(¬A.¬B.(C0.C1))
+    # yes = (A.¬B.C1)+(¬A.B.C0)+(¬A.¬B.(C0+C1))
     # Fun fact: We could try to simplify this.
     # We'll probably find a simpler equation for no.
