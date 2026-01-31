@@ -117,7 +117,7 @@
     },
     {
       "name": "kattis",
-      "count": 6,
+      "count": 7,
       "image": "kattis/platform.png",
       "tree": [
         {
@@ -141,6 +141,12 @@
         {
           "name": "Suspension Bridges",
           "path": "kattis/Suspension Bridges",
+          "type": "dir",
+          "has_files": true
+        },
+        {
+          "name": "TicTacToe",
+          "path": "kattis/TicTacToe",
           "type": "dir",
           "has_files": true
         },
@@ -209,5 +215,5 @@
       ]
     }
   ],
-  "generated_at": "2026-01-29T09:32:04.115029"
+  "generated_at": "2026-01-31T17:06:39.518576"
 }
